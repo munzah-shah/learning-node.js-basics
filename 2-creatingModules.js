@@ -9,5 +9,7 @@ function log(message) {
 
 // In order to use this module/function in another file, we need to add the functions and variables into exports array of module object as following
 
-module.exports.log = log; // this will export the log function
+module.exports = log; // this will export the log function as single function
+module.exports.log = log; // this will export the log function as property of module.exports object
+
 //Not exporting the url since we don't want to expose it outside of this module - so keeping it private
